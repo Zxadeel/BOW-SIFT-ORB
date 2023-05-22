@@ -1,4 +1,6 @@
 # BOW-SIFT-ORB
+Languages: Python
+
 In this project, I used the BOVW method to detect whether my water bottle was in an image or not. My methods could be easily altered for other objects.
 
 My motivation behind exploring the Bag of Visual Words (BOVW) could be broken down into two reasons. I am familiar with the Bag of Words methodology from a data mining course I took last semester, so I was excited to revisit it. My second reasoning is that I wanted to explore how using different methods of feature descriptors could alter the BOVW method and how it would impact the accuracy of the image classifications. I chose the SIFT and ORB feature descriptors.
