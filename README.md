@@ -1,14 +1,46 @@
-# BOW-SIFT-ORB
-Languages: Python
+# BOW-SIFT-ORB: Object Detection using Bag of Visual Words, SIFT, and ORB
 
-In this project, I used the BOVW method to detect whether my water bottle was in an image or not. My methods could be easily altered for other objects.
+**Languages:** Python
 
-My motivation behind exploring the Bag of Visual Words (BOVW) could be broken down into two reasons. I am familiar with the Bag of Words methodology from a data mining course I took last semester, so I was excited to revisit it. My second reasoning is that I wanted to explore how using different methods of feature descriptors could alter the BOVW method and how it would impact the accuracy of the image classifications. I chose the SIFT and ORB feature descriptors.
-I also attempted to implement SIFT (located in feat_exe.py as adl_sift()) using Lowe’s groundbreaking paper and any other resource I could find to compare it with the other descriptors. Unfortunately, due to difficulties and time constraints, I had to abandon it. 
+## Overview
 
-I used my iPhone to gather images for my dataset. I took images of the bottle from different angles and distances.After gathering my images, I converted them to the jpg format and decreased their sizes to 500 by 500 to help speed up the classification time. I split the images into training set and test set, then split each of those into “bottle” and “no_bottle” classes.
+The BOW-SIFT-ORB project is an exploration of the Bag of Visual Words (BOVW) method to detect the presence of a specific object, in this case, a water bottle, within an image. The methods employed in this project can be easily adapted for detecting other objects as well.
 
-Results from the detection system varied heavily and were extremely inconsistent. Initially, I noticed that BOVW using SIFT would outperform BOVW with ORB in accuracy, but was much slower than BOVW with ORB. Later on, I noticed that they would sometimes have equal accuracies, which I noticed in my video, and other times SIFT would perform worse. 
+### Motivation
 
-What could be causing this issue? I suspect it could be an issue with the training and testing datasets. Much of my training dataset images were taken inside, while much of my testing datasets were taken outside. The fact that the classifiers were trained on lower light, indoor images, and then were tested on brighter, outside images may be a cause. It could also be that my images for the “bottle” training set were not good enough.
-Although it performed poorly, with more time, I could improve results by choosing better images to improve the dataset, tweaking the number of clusters, or adjusting the frequency vectors. It would have been more interesting if I were able to put bounding boxes around the images that were identified as “bottle” I would also would have liked to explore alternative feature extraction methods and deep learning approaches.
+The project was motivated by two primary factors:
+
+1. **Familiarity with BOVW**: The use of Bag of Words methodology from a previous data mining course served as a starting point for this project. Revisiting this concept was both exciting and intellectually stimulating.
+
+2. **Exploring Feature Descriptors**: The project aimed to investigate how different feature descriptors could impact the BOVW method's accuracy. Specifically, the project utilized SIFT and ORB feature descriptors. There was also an attempt to implement SIFT using Lowe's seminal paper and other resources, although this effort had to be abandoned due to difficulties and time constraints.
+
+## Data Collection
+
+Images for the dataset were collected using an iPhone. Multiple images of the water bottle were taken from various angles and distances. These images were converted to the jpg format and resized to 500 by 500 pixels to enhance classification speed. The dataset was then split into training and test sets, further divided into "bottle" and "no_bottle" classes.
+
+## Results and Challenges
+
+The results obtained from the object detection system exhibited significant variability and inconsistency. Key observations included:
+
+- Initially, BOVW with SIFT outperformed BOVW with ORB in terms of accuracy but was notably slower.
+- Later, equal accuracies were observed between the two methods in some cases, as evident in video demonstrations, while in other cases, SIFT performed worse.
+
+**Challenges and Potential Causes**:
+
+The inconsistency in results could be attributed to several factors:
+
+- **Differences in Training and Testing Datasets**: The training dataset predominantly contained indoor images with lower light conditions, whereas the testing dataset comprised brighter outdoor images. This discrepancy may have contributed to the variation in performance.
+
+- **Dataset Quality**: The quality of images within the "bottle" training set may have influenced poor performance. With more time, improvements could be made by selecting higher-quality images, adjusting the number of clusters, or fine-tuning frequency vectors.
+
+## Future Directions
+
+Despite the challenges encountered, the project presents opportunities for further exploration and improvement:
+
+- **Bounding Boxes**: Implementing bounding boxes around identified "bottle" images would enhance the project's visual output.
+
+- **Enhanced Dataset**: Improving the dataset by selecting better images and refining preprocessing techniques.
+
+- **Algorithm Optimization**: Fine-tuning parameters such as the number of clusters and frequency vectors for better accuracy.
+
+- **Alternative Approaches**: Exploring alternative feature extraction methods and deep learning approaches for object detection.
